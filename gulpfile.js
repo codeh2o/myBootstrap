@@ -49,7 +49,7 @@ gulp.task('ie8', function () {
 gulp.task('sass', function () {
     gulp.src('assets/sass/*.scss')
         .pipe(gulpSass())
-        .pipe(replace(/~([^"]+\.(?:woff|ttf|otf|eot|svg)[^"]*)/ig, '../../../fonts/$1'))
+        .pipe(replace(/~([^"]+\.(?:woff|ttf|otf|eot|svg)[^"]*)/ig, '../fonts/$1'))
         .pipe(autoprefixer({
             browsers: ['last 4 versions', 'Android >= 4.0'],
             cascade: true,
